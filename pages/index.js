@@ -1,10 +1,8 @@
 import Head from "next/head";
 import GradientWrapper from "../components/GradientWrapper";
 import Hero from "../components/ui/Hero";
-import Features from "../components/ui/Features";
+import PlatformLogos from "../components/ui/PlatformLogos";
 import HowItWorks from "../components/ui/HowItWorks";
-import Capabilities from "../components/ui/Capabilities";
-import Testimonials from "../components/ui/Testimonials";
 import Pricing from "../components/ui/Pricing";
 import FooterCTA from "../components/ui/FooterCTA";
 
@@ -12,36 +10,28 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Carvohub - AI-Powered Garage Manager | Track Vehicles, Documents & Maintenance</title>
+        <title>Carvohub - AI Car Inspection Reports for Dealerships in India</title>
         <meta name='robots' content='index, follow' />
-        <meta name='description' content='Carvohub is your personal AI-assisted garage manager. Track vehicles, manage insurance and documents, monitor maintenance, and get intelligent insights for your car collection.' />
-        <meta name='keywords' content='garage manager, car management app, vehicle tracking, AI car assistant, maintenance tracker, car documents, insurance management, fleet management' />
+        <meta name='description' content='Generate professional AI-powered car inspection reports in minutes. Perfect for used car dealerships in India. Video-based analysis with shareable reports for all major listing platforms.' />
+        <meta name='keywords' content='car inspection reports India, AI car inspection, used car dealerships, vehicle inspection app, car listing India, CarDekho, OLX Autos, Cars24, automobile inspection, dealer tools' />
 
         {/* Open Graph */}
-        <meta property='og:title' content='Carvohub - AI-Powered Garage Manager' />
-        <meta property='og:description' content='Track vehicles, manage documents, and get AI-powered insights for your entire car collection.' />
+        <meta property='og:title' content='Carvohub - AI Car Inspection Reports for Dealerships' />
+        <meta property='og:description' content='Generate professional AI-powered car inspection reports for your dealership. Build customer trust and sell cars faster.' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://carvohub.github.io' />
 
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Carvohub - AI-Powered Garage Manager' />
-        <meta name='twitter:description' content='Track vehicles, manage documents, and get AI-powered insights for your entire car collection.' />
+        <meta name='twitter:title' content='Carvohub - AI Car Inspection Reports for Dealerships' />
+        <meta name='twitter:description' content='Generate professional AI-powered car inspection reports. Build customer trust and sell cars faster.' />
       </Head>
 
       <Hero />
 
-      <GradientWrapper>
-        <Features />
-      </GradientWrapper>
+      <PlatformLogos />
 
       <HowItWorks />
-
-      <GradientWrapper>
-        <Capabilities />
-      </GradientWrapper>
-
-      <Testimonials />
 
       <GradientWrapper>
         <Pricing />

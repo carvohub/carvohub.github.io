@@ -5,11 +5,11 @@ const FooterCTA = () => (
     <SectionWrapper id="download">
         <div className="custom-screen">
             <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                    Ready to Take Control of Your Garage?
+                <h2 className="text-gray-800 dark:text-gray-100 text-3xl font-semibold sm:text-4xl">
+                    Ready to Transform Your Dealership?
                 </h2>
-                <p className="mt-3 text-gray-600 text-lg">
-                    Download Carvohub today and experience the future of vehicle management. Free to start, powerful features when you need them.
+                <p className="mt-3 text-gray-600 dark:text-gray-400 text-lg">
+                    Start generating professional AI-powered inspection reports today. Build customer trust, sell cars faster, and grow your business with transparent, shareable reports.
                 </p>
 
                 {/* App Store Buttons */}
@@ -41,24 +41,24 @@ const FooterCTA = () => (
                 </div>
 
                 {/* Additional info */}
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
                     <div className="flex items-center gap-2">
-                        <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        Free to download
+                        5-minute report generation
                     </div>
                     <div className="flex items-center gap-2">
-                        <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        No credit card required
+                        Share on all platforms
                     </div>
                     <div className="flex items-center gap-2">
-                        <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        Works offline
+                        No commitment, pay per report
                     </div>
                 </div>
             </div>

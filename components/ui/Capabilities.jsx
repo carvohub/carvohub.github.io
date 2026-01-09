@@ -75,9 +75,9 @@ const Capabilities = () => {
                     {capabilities.map((item, idx) => (
                         <div
                             key={idx}
-                            className="group flex gap-4 p-6 bg-white rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-lg transition-all duration-300"
+                            className="group flex gap-4 p-6 bg-white rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300"
                         >
-                            <div className="flex-none w-14 h-14 bg-gradient-to-br from-indigo-50 to-green-50 rounded-xl flex items-center justify-center text-indigo-600 group-hover:scale-110 transition-transform duration-300">
+                            <div className="flex-none w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform duration-300">
                                 {item.icon}
                             </div>
                             <div>

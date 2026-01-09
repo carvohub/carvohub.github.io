@@ -1,143 +1,168 @@
 import NavLink from "./NavLink"
 
 const Hero = () => (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-white dark:bg-gray-900 transition-colors">
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10">
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-300 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-30 dark:opacity-20 animate-blob"></div>
+            <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-300 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-30 dark:opacity-20 animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-200 dark:bg-blue-700 rounded-full mix-blend-multiply dark:mix-blend-normal filter blur-xl opacity-30 dark:opacity-20 animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="custom-screen py-20 md:py-28 text-gray-600">
-            <div className="space-y-5 max-w-4xl mx-auto text-center">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 border border-indigo-100 rounded-full text-sm text-indigo-700 font-medium">
-                    <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                    </span>
-                    AI-Powered Vehicle Management
-                </div>
-
-                <h1 className="text-4xl text-gray-800 font-extrabold mx-auto sm:text-5xl md:text-6xl leading-tight">
-                    Your Personal{" "}
-                    <span className="bg-gradient-to-r from-indigo-600 to-green-500 bg-clip-text text-transparent">
-                        AI Garage Manager
-                    </span>
-                </h1>
-
-                <p className="max-w-2xl mx-auto text-lg text-gray-600">
-                    Track your vehicles, manage insurance and documents, monitor maintenance schedules,
-                    and get AI-powered insights on value and future needs. All in one beautiful app.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 font-medium text-sm pt-4">
-                    <NavLink
-                        href="#download"
-                        className="w-full sm:w-auto text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 shadow-lg shadow-indigo-500/25"
-                    >
-                        <span className="flex items-center justify-center gap-2">
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Download Free
+        <div className="custom-screen py-20 md:py-28">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left Column - Text Content */}
+                <div className="space-y-6">
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 rounded-full text-sm text-blue-700 dark:text-blue-300 font-medium">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                         </span>
-                    </NavLink>
-                    <NavLink
-                        href="#features"
-                        className="w-full sm:w-auto text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400"
-                    >
-                        See How It Works
-                    </NavLink>
-                </div>
+                        AI-Powered Car Inspection Reports
+                    </div>
 
-                {/* Stats */}
-                <div className="pt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-                    {[
-                        { value: "50K+", label: "Active Users" },
-                        { value: "200K+", label: "Vehicles Tracked" },
-                        { value: "4.9", label: "App Store Rating" },
-                        { value: "99.9%", label: "Uptime" },
-                    ].map((stat, idx) => (
-                        <div key={idx} className="text-center">
-                            <div className="text-2xl md:text-3xl font-bold text-gray-800">{stat.value}</div>
-                            <div className="text-sm text-gray-500">{stat.label}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+                    <h1 className="text-4xl text-gray-800 dark:text-white font-extrabold sm:text-5xl lg:text-6xl leading-tight">
+                        Build Trust with{" "}
+                        <span className="text-blue-600 dark:text-blue-400">
+                            Professional Inspection Reports
+                        </span>
+                    </h1>
 
-            {/* App Preview */}
-            <div className="mt-16 relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 pointer-events-none"></div>
-                <div className="relative mx-auto max-w-5xl">
-                    <div className="bg-gradient-to-br from-indigo-500 to-green-500 rounded-2xl p-1 shadow-2xl">
-                        <div className="bg-gray-900 rounded-xl overflow-hidden">
-                            <div className="flex items-center gap-2 px-4 py-3 bg-gray-800">
-                                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                        Generate comprehensive AI-powered car inspection reports in minutes using just video and photos.
+                        Perfect for used car dealerships in India. Share instantly on all major listing platforms and with customers.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row items-start gap-3 font-medium text-sm pt-4">
+                        <NavLink
+                            href="#pricing"
+                            className="w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-lg shadow-blue-500/25"
+                        >
+                            <span className="flex items-center justify-center gap-2">
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                Get Started
+                            </span>
+                        </NavLink>
+                        <NavLink
+                            href="#how-it-works"
+                            className="w-full sm:w-auto text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500"
+                        >
+                            See How It Works
+                        </NavLink>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="pt-6 grid grid-cols-2 gap-6">
+                        {[
+                            { value: "5 Min", label: "Report Generation" },
+                            { value: "AI-Powered", label: "Video Analysis" },
+                            { value: "₹499", label: "Starting From" },
+                            { value: "100%", label: "Trust Guaranteed" },
+                        ].map((stat, idx) => (
+                            <div key={idx}>
+                                <div className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">{stat.value}</div>
+                                <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
                             </div>
-                            <div className="p-6 md:p-8">
-                                <div className="grid md:grid-cols-3 gap-4">
-                                    {/* Vehicle Card */}
-                                    <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
+                        ))}
+                    </div>
+                </div>
+
+                {/* Right Column - Mobile Phone Mockup */}
+                <div className="relative flex justify-center lg:justify-end">
+                    <div className="relative">
+                        {/* Mobile Phone Frame */}
+                        <div className="relative w-[280px] h-[560px] bg-gray-900 rounded-[3rem] shadow-2xl border-8 border-gray-800">
+                            {/* Notch */}
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
+
+                            {/* Screen Content */}
+                            <div className="relative w-full h-full bg-white dark:bg-gray-100 rounded-[2.3rem] overflow-hidden">
+                                {/* Status Bar */}
+                                <div className="bg-blue-600 px-6 py-3 flex items-center justify-between">
+                                    <span className="text-white text-xs font-semibold">9:41</span>
+                                    <div className="flex items-center gap-1">
+                                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                        </svg>
+                                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M17.778 8.222c-4.296-4.296-11.26-4.296-15.556 0A1 1 0 01.808 6.808c5.076-5.077 13.308-5.077 18.384 0a1 1 0 01-1.414 1.414zM14.95 11.05a7 7 0 00-9.9 0 1 1 0 01-1.414-1.414 9 9 0 0112.728 0 1 1 0 01-1.414 1.414zM12.12 13.88a3 3 0 00-4.242 0 1 1 0 01-1.415-1.415 5 5 0 017.072 0 1 1 0 01-1.415 1.415zM9 16a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                                        </svg>
+                                        <div className="w-5 h-2.5 border border-white rounded-sm relative">
+                                            <div className="absolute inset-0.5 bg-white rounded-sm"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* App Header */}
+                                <div className="bg-white px-4 py-3 border-b border-gray-200">
+                                    <h3 className="text-gray-900 font-bold text-base">New Inspection</h3>
+                                    <p className="text-gray-500 text-xs">2019 Honda City VX</p>
+                                </div>
+
+                                {/* Content Area */}
+                                <div className="p-4 space-y-3 bg-gray-50">
+                                    {/* Video Recording Card */}
+                                    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
                                         <div className="flex items-center gap-3 mb-3">
-                                            <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center">
-                                                <svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                                <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                                 </svg>
                                             </div>
-                                            <div>
-                                                <div className="text-white font-medium">2023 Tesla Model 3</div>
-                                                <div className="text-gray-400 text-sm">Primary Vehicle</div>
+                                            <div className="flex-1">
+                                                <div className="text-gray-900 font-semibold text-sm">Recording Video</div>
+                                                <div className="text-gray-500 text-xs">360° Inspection</div>
                                             </div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <div className="flex justify-between text-sm">
-                                                <span className="text-gray-400">Mileage</span>
-                                                <span className="text-white">24,580 mi</span>
-                                            </div>
-                                            <div className="flex justify-between text-sm">
-                                                <span className="text-gray-400">Next Service</span>
-                                                <span className="text-green-400">In 2,420 mi</span>
-                                            </div>
+                                        <div className="w-full bg-gray-200 rounded-full h-2">
+                                            <div className="bg-blue-600 h-2 rounded-full animate-pulse" style={{width: '75%'}}></div>
                                         </div>
                                     </div>
 
-                                    {/* AI Insights Card */}
-                                    <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                                        <div className="flex items-center gap-2 mb-3">
-                                            <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center">
-                                                <svg className="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    {/* AI Analysis Card */}
+                                    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                        <div className="flex items-center gap-2 mb-2">
+                                            <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                                <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                                                 </svg>
                                             </div>
-                                            <span className="text-green-400 font-medium text-sm">AI Insight</span>
+                                            <span className="text-blue-600 font-semibold text-xs">Analyzing...</span>
                                         </div>
-                                        <p className="text-gray-300 text-sm">
-                                            Based on your driving patterns, consider rotating tires before your next road trip for optimal performance.
+                                        <p className="text-gray-600 text-xs leading-relaxed">
+                                            Detecting exterior condition, interior quality, and mechanical issues
                                         </p>
                                     </div>
 
-                                    {/* Documents Card */}
-                                    <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                                        <div className="text-white font-medium mb-3">Documents</div>
+                                    {/* Report Preview Card */}
+                                    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+                                        <div className="text-gray-900 font-semibold text-sm mb-2">Report Preview</div>
                                         <div className="space-y-2">
-                                            {["Insurance Policy", "Registration", "Service History"].map((doc, idx) => (
-                                                <div key={idx} className="flex items-center gap-2 text-sm">
-                                                    <svg className="w-4 h-4 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            {["Exterior: Excellent", "Interior: Good", "Engine: Verified"].map((item, idx) => (
+                                                <div key={idx} className="flex items-center gap-2 text-xs">
+                                                    <svg className="w-3 h-3 text-blue-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                                     </svg>
-                                                    <span className="text-gray-300">{doc}</span>
+                                                    <span className="text-gray-600">{item}</span>
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
+
+                                    {/* Generate Button */}
+                                    <button className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg text-sm shadow-lg">
+                                        Generate Report
+                                    </button>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Floating Accent */}
+                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl"></div>
+                        <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-400/20 rounded-full blur-2xl"></div>
                     </div>
                 </div>
             </div>

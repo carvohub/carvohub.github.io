@@ -8,34 +8,22 @@ const Footer = () => {
                 { href: "#features", name: "Features" },
                 { href: "#how-it-works", name: "How It Works" },
                 { href: "#pricing", name: "Pricing" },
-                { href: "#download", name: "Download" },
-            ],
-        },
-        {
-            label: "Resources",
-            items: [
-                { href: "#", name: "Help Center" },
-                { href: "#", name: "Blog" },
-                { href: "#", name: "User Guides" },
-                { href: "#", name: "API Docs" },
+                { href: "#contact", name: "Contact" },
             ],
         },
         {
             label: "Company",
             items: [
-                { href: "#", name: "About Us" },
-                { href: "#", name: "Careers" },
-                { href: "#", name: "Press" },
-                { href: "#", name: "Contact" },
+                { href: "#about", name: "About" },
+                { href: "#careers", name: "Careers" },
+                { href: "mailto:hello@carvohub.com", name: "Contact" },
             ],
         },
         {
             label: "Legal",
             items: [
-                { href: "#", name: "Privacy Policy" },
-                { href: "#", name: "Terms of Service" },
-                { href: "#", name: "Cookie Policy" },
-                { href: "#", name: "GDPR" },
+                { href: "#privacy", name: "Privacy Policy" },
+                { href: "#terms", name: "Terms of Service" },
             ],
         },
     ]
@@ -80,21 +68,21 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="bg-gray-50 border-t border-gray-100">
+        <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
             <div className="custom-screen pt-16 pb-8">
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-6">
                     {/* Brand section */}
                     <div className="lg:col-span-2">
                         <Brand />
-                        <p className="mt-4 text-gray-600 max-w-xs">
-                            Your AI-powered personal garage manager. Track vehicles, manage documents, and get intelligent insights.
+                        <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xs">
+                            AI-powered car inspection reports for dealerships. Build trust, sell faster.
                         </p>
                         <div className="mt-6 flex gap-4">
                             {socialLinks.map((item, idx) => (
                                 <a
                                     key={idx}
                                     href={item.href}
-                                    className="text-gray-400 hover:text-indigo-600 transition-colors"
+                                    className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                     aria-label={item.name}
                                 >
                                     {item.icon}
@@ -106,13 +94,13 @@ const Footer = () => {
                     {/* Navigation sections */}
                     {footerNavs.map((section, idx) => (
                         <div key={idx}>
-                            <h3 className="text-gray-800 font-semibold mb-4">{section.label}</h3>
+                            <h3 className="text-gray-800 dark:text-gray-200 font-semibold mb-4">{section.label}</h3>
                             <ul className="space-y-3">
                                 {section.items.map((item, itemIdx) => (
                                     <li key={itemIdx}>
                                         <a
                                             href={item.href}
-                                            className="text-gray-600 hover:text-indigo-600 transition-colors"
+                                            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                         >
                                             {item.name}
                                         </a>
@@ -124,16 +112,16 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom section */}
-                <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-500 text-sm">
+                <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm">
                         © {new Date().getFullYear()} Carvohub. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                         <span>Made with</span>
-                        <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-4 h-4 text-red-500 dark:text-red-400" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                         </svg>
-                        <span>for car enthusiasts everywhere</span>
+                        <span>in Bangalore, India</span>
                     </div>
                 </div>
             </div>
