@@ -23,7 +23,7 @@ const Hero = () => (
                     </div>
 
                     <h1 className="text-4xl text-gray-800 dark:text-white font-extrabold sm:text-5xl lg:text-6xl leading-tight">
-                        Build Trust with{" "}
+                        Generate{" "}
                         <span className="text-blue-600 dark:text-blue-400">
                             Professional Inspection Reports
                         </span>
@@ -36,14 +36,14 @@ const Hero = () => (
 
                     <div className="flex flex-col sm:flex-row items-start gap-3 font-medium text-sm pt-4">
                         <NavLink
-                            href="#pricing"
+                            href="mailto:hello@carvohub.com"
                             className="w-full sm:w-auto text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 shadow-lg shadow-blue-500/25"
                         >
                             <span className="flex items-center justify-center gap-2">
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
-                                Get Started
+                                Contact Us
                             </span>
                         </NavLink>
                         <NavLink
@@ -59,8 +59,8 @@ const Hero = () => (
                         {[
                             { value: "5 Min", label: "Report Generation" },
                             { value: "AI-Powered", label: "Video Analysis" },
-                            { value: "₹499", label: "Starting From" },
-                            { value: "100%", label: "Trust Guaranteed" },
+                            { value: "100+", label: "Parameters Checked" },
+                            { value: "Shareable", label: "PDF Reports" },
                         ].map((stat, idx) => (
                             <div key={idx}>
                                 <div className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">{stat.value}</div>

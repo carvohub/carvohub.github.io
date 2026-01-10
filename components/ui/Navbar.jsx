@@ -13,7 +13,6 @@ const Navbar = () => {
 
     const navigation = [
         { title: "How It Works", path: "#how-it-works" },
-        { title: "Pricing", path: "#pricing" },
     ]
 
     useEffect(() => {

@@ -1,9 +1,7 @@
 import Head from "next/head";
-import GradientWrapper from "../components/GradientWrapper";
 import Hero from "../components/ui/Hero";
 import PlatformLogos from "../components/ui/PlatformLogos";
 import HowItWorks from "../components/ui/HowItWorks";
-import Pricing from "../components/ui/Pricing";
 import FooterCTA from "../components/ui/FooterCTA";
 
 export default function Home() {
@@ -32,10 +30,6 @@ export default function Home() {
       <PlatformLogos />
 
       <HowItWorks />
-
-      <GradientWrapper>
-        <Pricing />
-      </GradientWrapper>
 
       <FooterCTA />
     </>

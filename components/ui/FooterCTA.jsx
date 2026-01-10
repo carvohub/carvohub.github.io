@@ -9,7 +9,7 @@ const FooterCTA = () => (
                     Ready to Transform Your Dealership?
                 </h2>
                 <p className="mt-3 text-gray-600 dark:text-gray-400 text-lg">
-                    Start generating professional AI-powered inspection reports today. Build customer trust, sell cars faster, and grow your business with transparent, shareable reports.
+                    Start generating professional AI-powered inspection reports today. Sell cars faster and grow your business with transparent, shareable reports.
                 </p>
 
                 {/* App Store Buttons */}
