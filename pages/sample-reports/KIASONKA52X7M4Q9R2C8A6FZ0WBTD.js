@@ -412,7 +412,7 @@ const ReportPage = () => {
                                     <p>
                                         <span className="font-medium">Location:</span>{" "}
                                         <a
-                                            href={`https://www.google.com/maps?q=${sellerData.latitude},${sellerData.longitude}`}
+                                            href="https://maps.app.goo.gl/ghJsPTYtmsZk5XK27"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-blue-600 dark:text-blue-400 hover:underline"
