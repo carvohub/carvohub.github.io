@@ -12,7 +12,8 @@ const Navbar = () => {
     const { events } = useRouter();
 
     const navigation = [
-        { title: "How It Works", path: "#how-it-works" },
+        { title: "Inspection Reports", path: "/sample-reports" },
+        { title: "How It Works", path: "/#how-it-works" },
     ]
 
     useEffect(() => {
