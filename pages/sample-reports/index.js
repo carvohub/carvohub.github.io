@@ -27,7 +27,7 @@ const SampleReportsPage = () => {
                             Inspection Reports
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            Browse our AI-powered inspection reports. Each report includes detailed photos, condition assessments, and comprehensive vehicle analysis.
+                            Each report includes detailed photos, condition assessments, and comprehensive vehicle analysis.
                         </p>
                     </div>
 

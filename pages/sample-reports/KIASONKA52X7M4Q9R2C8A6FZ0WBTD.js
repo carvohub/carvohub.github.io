@@ -1,6 +1,15 @@
 import Head from "next/head";
 
 const ReportPage = () => {
+    const sellerData = {
+        name: "South City Cars",
+        phone: "+919845493970",
+        whatsapp: "+919845493970",
+        address: "25&26, 23rd Main Rd, opp. Innisfree House School Ranga Shankara, R K Colony, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078",
+        latitude: 12.9116249,
+        longitude: 77.5868232,
+    };
+
     const reportData = {
         carUUID: "KIASONKA52X7M4Q9R2C8A6FZ0WBTD",
         title: "2024 Kia Sonet Diesel",
@@ -351,6 +360,71 @@ const ReportPage = () => {
                         </div>
                     </Section>
 
+                    {/* Seller Details Section */}
+                    <Section title="Seller Details" icon={<SellerIcon />}>
+                        <div className="flex flex-col sm:flex-row gap-6">
+                            {/* Dealer Map */}
+                            <div className="w-full sm:w-64 h-48 bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden">
+                                <iframe
+                                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.3!2d${sellerData.longitude}!3d${sellerData.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150d2527f251%3A0x3a3c34652415412a!2sSouth%20City%20Cars%20(Used%20Cars%20dealers)!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin`}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Dealer Location"
+                                ></iframe>
+                            </div>
+
+                            {/* Dealer Info */}
+                            <div className="flex-1 space-y-3">
+                                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                                    {sellerData.name}
+                                </h3>
+
+                                <div className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                                    <p>
+                                        <span className="font-medium">Address:</span>{" "}
+                                        {sellerData.address}
+                                    </p>
+
+                                    <p>
+                                        <span className="font-medium">Phone:</span>{" "}
+                                        <a
+                                            href={`tel:${sellerData.phone}`}
+                                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        >
+                                            {sellerData.phone}
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <span className="font-medium">Email:</span>{" "}
+                                        <a
+                                            href="mailto:hello@carvohub.com"
+                                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        >
+                                            hello@carvohub.com
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <span className="font-medium">Location:</span>{" "}
+                                        <a
+                                            href={`https://www.google.com/maps?q=${sellerData.latitude},${sellerData.longitude}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        >
+                                            Open in Google Maps
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </Section>
+
                     {/* Bottom CTA */}
                     <div className="mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 text-center">
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Have questions about this report?</h3>
@@ -500,6 +574,12 @@ const ElectricalIcon = () => (
 const WheelIcon = () => (
     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+);
+
+const SellerIcon = () => (
+    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zM12 11a2 2 0 100-4 2 2 0 000 4z" />
     </svg>
 );
 
