@@ -263,7 +263,7 @@ const ReportPage = () => {
                                 <StatusItem status="good">Bluetooth connection works</StatusItem>
                                 <StatusItem status="good">Navigation system exists and shows the correct location</StatusItem>
                                 <StatusItem status="good">Speakers are in good condition</StatusItem>
-                                <StatusItem status="good">Both Android Auto and Apple CarPlay exist as wireless connect</StatusItem>
+                                <StatusItem status="good">Both Android Auto and Apple CarPlay exist as wireless and wired connect</StatusItem>
                             </ul>
                         </SubSection>
 
@@ -332,28 +332,28 @@ const ReportPage = () => {
                             <TyreCard
                                 position="Left Front"
                                 date="March 2024"
-                                tread="7mm"
+                                tread="1mm"
                                 wheelCondition="No scratches and dents"
                                 image={tyrePhotos.lf}
                             />
                             <TyreCard
                                 position="Right Front"
                                 date="March 2024"
-                                tread="7mm"
+                                tread="1mm"
                                 wheelCondition="No scratches and dents"
                                 image={tyrePhotos.rf}
                             />
                             <TyreCard
                                 position="Left Rear"
                                 date="March 2024"
-                                tread="7mm"
+                                tread="1mm"
                                 wheelCondition="No scratches and dents"
                                 image={tyrePhotos.lr}
                             />
                             <TyreCard
                                 position="Right Rear"
                                 date="March 2024"
-                                tread="7mm"
+                                tread="1mm"
                                 wheelCondition="No scratches and dents"
                                 image={tyrePhotos.rr}
                             />
