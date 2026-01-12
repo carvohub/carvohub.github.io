@@ -30,7 +30,7 @@ const ReportPage = () => {
 
     const scratchPhotos = [
         { src: `${basePath}/scratch-1.jpeg`, alt: "Scratch on front left door" },
-        { src: `${basePath}/scratch-2.jpeg`, alt: "Scratch on rear left panel" },
+        { src: `${basePath}/scratch-2.jpeg`, alt: "Minor Dent on front right panel" },
         { src: `${basePath}/scratch-3.jpeg`, alt: "Scratch on front right fender" },
     ];
 
