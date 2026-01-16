@@ -42,21 +42,23 @@ const Navbar = () => {
                         carvohub
                     </Link>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
-                        {navigation.map((item, idx) => (
-                            <Link
-                                key={idx}
-                                href={item.path}
-                                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                            >
-                                {item.title}
-                            </Link>
-                        ))}
-                    </div>
+                    {/* Right Side - Navigation + Actions */}
+                    <div className="flex items-center gap-8">
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex items-center gap-8">
+                            {navigation.map((item, idx) => (
+                                <Link
+                                    key={idx}
+                                    href={item.path}
+                                    className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                                >
+                                    {item.title}
+                                </Link>
+                            ))}
+                        </div>
 
-                    {/* Right Side */}
-                    <div className="flex items-center gap-4">
+                        {/* Actions */}
+                        <div className="flex items-center gap-4">
                         {/* Theme Toggle */}
                         {mounted && (
                             <button
@@ -100,6 +102,7 @@ const Navbar = () => {
                                 </svg>
                             )}
                         </button>
+                        </div>
                     </div>
                 </div>
 
