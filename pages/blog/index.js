@@ -11,6 +11,46 @@ const BlogPage = () => {
             readTime: "5 min read",
             category: "Buyer's Guide",
         },
+        {
+            slug: "top-10-reliable-used-cars-india-2025",
+            title: "Top 10 Most Reliable Used Cars to Buy in India (2025)",
+            excerpt: "We've analyzed thousands of inspection reports to bring you the definitive list of India's most reliable used cars. From Maruti Swift to Toyota Innova.",
+            date: "January 15, 2026",
+            readTime: "8 min read",
+            category: "Buyer's Guide",
+        },
+        {
+            slug: "classic-cars-that-defined-automotive-history",
+            title: "10 Classic Cars That Defined Automotive History",
+            excerpt: "From the Ford Mustang to the Jaguar E-Type, these iconic machines didn't just drive on roads—they drove history forward.",
+            date: "January 14, 2026",
+            readTime: "10 min read",
+            category: "Automotive History",
+        },
+        {
+            slug: "electric-vs-petrol-used-car-guide",
+            title: "Electric vs Petrol: The Complete Used Car Buyer's Guide",
+            excerpt: "Should you buy a used electric car or stick with petrol? Compare costs, maintenance, range, and more in our comprehensive guide.",
+            date: "January 13, 2026",
+            readTime: "7 min read",
+            category: "Buyer's Guide",
+        },
+        {
+            slug: "greatest-supercars-of-all-time",
+            title: "The Greatest Supercars of All Time",
+            excerpt: "From the McLaren F1 to the Bugatti Veyron, these machines represent the pinnacle of automotive achievement where engineering meets art.",
+            date: "January 12, 2026",
+            readTime: "12 min read",
+            category: "Automotive Legends",
+        },
+        {
+            slug: "japanese-jdm-legends",
+            title: "JDM Legends: Japanese Cars That Conquered the World",
+            excerpt: "The Skyline GT-R, Toyota Supra, Mazda RX-7—these Japanese icons defined a golden era of performance cars and created a culture that endures today.",
+            date: "January 11, 2026",
+            readTime: "9 min read",
+            category: "Automotive History",
+        },
     ];
 
     return (
