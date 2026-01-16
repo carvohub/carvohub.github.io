@@ -12,7 +12,7 @@ const Navbar = () => {
     const { events } = useRouter();
 
     const navigation = [
-        { title: "Inspection Reports", path: "/sample-reports" },
+        { title: "Vehicle Reports", path: "/vehicle-reports" },
         { title: "How It Works", path: "/#how-it-works" },
     ]
 

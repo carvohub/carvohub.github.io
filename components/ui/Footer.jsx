@@ -75,7 +75,7 @@ const Footer = () => {
                     <div className="lg:col-span-2">
                         <Brand />
                         <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xs">
-                            AI-powered car inspection reports for dealerships. Build trust, sell faster.
+                            Independent Buyer's guide with inspected vehicles. Build trust, sell faster.
                         </p>
                         <div className="mt-6 flex gap-4">
                             {socialLinks.map((item, idx) => (

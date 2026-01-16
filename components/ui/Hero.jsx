@@ -19,19 +19,18 @@ const Hero = () => (
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                         </span>
-                        AI-Powered Car Inspection Reports
+                        Independent Vehicle Inspection Reports
                     </div>
 
                     <h1 className="text-4xl text-gray-800 dark:text-white font-extrabold sm:text-5xl lg:text-6xl leading-tight">
-                        Generate{" "}
+                        Buy Cars{" "}
                         <span className="text-blue-600 dark:text-blue-400">
-                            Professional Inspection Reports
+                            with Confidence
                         </span>
                     </h1>
 
                     <p className="text-lg text-gray-600 dark:text-gray-400">
-                        Generate comprehensive AI-powered car inspection reports in minutes using just video and photos.
-                        Perfect for used car dealerships in India. Share instantly on all major listing platforms and with customers.
+                    Get a comprehensive vehicle inspection report and expert buyer's guide. Make informed decisions and avoid costly mistakes.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-start gap-3 font-medium text-sm pt-4">
@@ -57,10 +56,10 @@ const Hero = () => (
                     {/* Stats */}
                     <div className="pt-6 grid grid-cols-2 gap-6">
                         {[
-                            { value: "5 Min", label: "Report Generation" },
-                            { value: "AI-Powered", label: "Video Analysis" },
+                            { value: "Detailed", label: "Report Generation" },
+                            { value: "Comprehensive", label: "Video Analysis" },
                             { value: "100+", label: "Parameters Checked" },
-                            { value: "Shareable", label: "PDF Reports" },
+                            { value: "Easy", label: "Access to reports" },
                         ].map((stat, idx) => (
                             <div key={idx}>
                                 <div className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">{stat.value}</div>

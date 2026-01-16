@@ -6,14 +6,14 @@ const FooterCTA = () => (
         <div className="custom-screen">
             <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-gray-800 dark:text-gray-100 text-3xl font-semibold sm:text-4xl">
-                    Ready to Transform Your Dealership?
+                Make Your Next Car Purchase a Smart One
                 </h2>
                 <p className="mt-3 text-gray-600 dark:text-gray-400 text-lg">
-                    Start generating professional AI-powered inspection reports today. Sell cars faster and grow your business with transparent, shareable reports.
+                Get an independent assessment of a car’s real condition. Our standardized inspections produce transparent, shareable reports that surface risks early and help buyers move forward with clarity and confidence.
                 </p>
 
                 {/* App Store Buttons */}
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                {/* <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a
                         href="#"
                         className="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition-colors"
@@ -38,7 +38,7 @@ const FooterCTA = () => (
                             <div className="text-lg font-semibold">Google Play</div>
                         </div>
                     </a>
-                </div>
+                </div> */}
 
                 {/* Additional info */}
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
@@ -46,19 +46,19 @@ const FooterCTA = () => (
                         <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        5-minute report generation
+                        Independent Buyer's Guide
                     </div>
                     <div className="flex items-center gap-2">
                         <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        Share on all platforms
+                        Photo and Video backed Inspection Reports
                     </div>
                     <div className="flex items-center gap-2">
                         <svg className="w-5 h-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        No commitment, pay per report
+                        Clear Risk Disclosure
                     </div>
                 </div>
             </div>

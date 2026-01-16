@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
                 <meta property='og:type' content='website' />
                 <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
             </Head>
-            <TopRibbon />
+            {/* <TopRibbon /> */}
             <Navbar />
             <main className="bg-white dark:bg-gray-900 transition-colors">{children}</main>
             <Footer />
