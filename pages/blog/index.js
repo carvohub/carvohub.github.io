@@ -29,11 +29,11 @@ const BlogPage = () => {
                 <div className="max-w-7xl mx-auto px-6 py-20">
                     {/* Section Header */}
                     <div className="mb-16">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-3">
+                        <h1 className="text-5xl md:text-6xl font-bold mb-1">
                             <span className="text-gray-900 dark:text-white">Insights &</span>
                         </h1>
-                        <h2 className="text-5xl md:text-6xl font-bold mb-6">
-                            <span className="text-gray-400 dark:text-gray-600">Guides</span>
+                        <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+                            <span className="text-gray-400 dark:text-gray-500">Guides</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl">
                             Expert advice on buying used cars and understanding vehicle inspections.

@@ -27,11 +27,11 @@ const HowItWorks = () => {
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Header - Split style */}
                 <div className="mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-3">
+                    <h2 className="text-5xl md:text-6xl font-bold mb-1">
                         <span className="text-gray-900 dark:text-white">How It</span>
                     </h2>
-                    <h3 className="text-4xl md:text-5xl font-bold">
-                        <span className="text-gray-400 dark:text-gray-600">Works</span>
+                    <h3 className="text-3xl md:text-4xl font-extrabold">
+                        <span className="text-gray-400 dark:text-gray-500">Works</span>
                     </h3>
                 </div>
 
