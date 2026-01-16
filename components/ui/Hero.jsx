@@ -21,11 +21,11 @@ const Hero = () => (
                     </div>
 
                     {/* Main heading - split style */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-none tracking-tight mb-4">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tight mb-2">
                         <span className="text-gray-900 dark:text-white">Buy Cars With</span>
                     </h1>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-none tracking-tight mb-8">
-                        <span className="text-gray-400 dark:text-gray-600">Confidence</span>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-none tracking-tight mb-8">
+                        <span className="text-gray-400 dark:text-gray-500">Confidence</span>
                     </h2>
 
                     {/* Description */}

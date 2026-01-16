@@ -4,11 +4,11 @@ const FooterCTA = () => (
     <section className="py-24 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-3">
+                <h2 className="text-5xl md:text-6xl font-bold mb-1">
                     <span className="text-gray-900 dark:text-white">Questions About</span>
                 </h2>
-                <h3 className="text-4xl md:text-5xl font-bold mb-8">
-                    <span className="text-gray-400 dark:text-gray-600">Buying a Car?</span>
+                <h3 className="text-3xl md:text-4xl font-extrabold mb-8">
+                    <span className="text-gray-400 dark:text-gray-500">Buying a Car?</span>
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
                     Get an independent assessment of a car's real condition. Our standardized inspections
