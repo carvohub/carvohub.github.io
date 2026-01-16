@@ -6,17 +6,17 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>Carvohub - Independent Vehicle Inspection Reports</title>
-                <meta name='description' content='Get comprehensive vehicle inspection reports with expert analysis. Make informed decisions when buying used cars in India.' />
+                <title>Carvohub - Pre-Purchase Vehicle Inspection Reports India</title>
+                <meta name='description' content='Get detailed vehicle inspection reports before buying a used car in India. 100+ point inspection with photo and video documentation.' />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
-                <meta name='keywords' content='car inspection reports India, vehicle inspection, used car buyers guide, car assessment, automobile inspection, car condition report' />
-                <meta property='og:title' content='Carvohub - Independent Vehicle Inspection Reports' />
-                <meta property='og:description' content='Comprehensive vehicle inspection reports for used car buyers. Expert analysis and transparent assessments.' />
+                <meta name='keywords' content='pre-purchase car inspection India, used car inspection report, vehicle condition report, car buying guide India, automobile inspection service' />
+                <meta property='og:title' content='Carvohub - Pre-Purchase Vehicle Inspection Reports India' />
+                <meta property='og:description' content='Get detailed vehicle inspection reports before buying a used car. 100+ point inspection with photos and videos.' />
                 <meta property='og:type' content='website' />
                 <meta property='og:site_name' content='Carvohub' />
                 <meta name='twitter:card' content='summary_large_image' />
-                <meta name='twitter:title' content='Carvohub - Independent Vehicle Inspection Reports' />
-                <meta name='twitter:description' content='Comprehensive vehicle inspection reports for used car buyers.' />
+                <meta name='twitter:title' content='Carvohub - Pre-Purchase Vehicle Inspection Reports India' />
+                <meta name='twitter:description' content='Get detailed 100+ point inspection reports before buying a used car. Independent assessments with photo and video documentation.' />
                 <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
                 <link rel='canonical' href='https://carvohub.com' />
             </Head>

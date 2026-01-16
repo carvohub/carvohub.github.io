@@ -16,12 +16,12 @@ const VehicleReportsPage = () => {
     return (
         <>
             <Head>
-                <title>Vehicle Inspection Reports | Carvohub</title>
+                <title>Used Car Inspection Reports India | Sample Reports | Carvohub</title>
                 <meta
                     name="description"
-                    content="Browse comprehensive vehicle inspection reports. See detailed assessments with photos, condition ratings, and expert analysis for used cars in India."
+                    content="Browse real vehicle inspection reports with 100+ point assessments, photos, and videos. See exactly what our pre-purchase inspections reveal about used cars."
                 />
-                <meta name="keywords" content="vehicle inspection reports, car condition reports, used car reports India, pre-purchase inspection" />
+                <meta name="keywords" content="used car inspection report sample, vehicle condition report India, pre-purchase inspection example, car assessment report, second hand car verification" />
                 <link rel="canonical" href="https://carvohub.com/vehicle-reports" />
             </Head>
 
