@@ -30,10 +30,10 @@ const VehicleReportsPage = () => {
                     {/* Section Header - Split style */}
                     <div className="mb-16">
                         <h1 className="text-5xl md:text-6xl font-bold mb-3">
-                            <span className="text-gray-900 dark:text-white">vehicle</span>
+                            <span className="text-gray-900 dark:text-white">Vehicle</span>
                         </h1>
                         <h2 className="text-5xl md:text-6xl font-bold mb-6">
-                            <span className="text-gray-400 dark:text-gray-600">reports</span>
+                            <span className="text-gray-400 dark:text-gray-600">Reports</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl">
                             Comprehensive inspection reports with photos, videos, and expert assessments.

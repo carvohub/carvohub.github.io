@@ -5,10 +5,10 @@ const FooterCTA = () => (
         <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold mb-3">
-                    <span className="text-gray-900 dark:text-white">questions about</span>
+                    <span className="text-gray-900 dark:text-white">Questions About</span>
                 </h2>
                 <h3 className="text-4xl md:text-5xl font-bold mb-8">
-                    <span className="text-gray-400 dark:text-gray-600">buying a car?</span>
+                    <span className="text-gray-400 dark:text-gray-600">Buying a Car?</span>
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
                     Get an independent assessment of a car's real condition. Our standardized inspections
