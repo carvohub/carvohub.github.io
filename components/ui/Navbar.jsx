@@ -38,11 +38,8 @@ const Navbar = () => {
             <nav className="max-w-7xl mx-auto px-6">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                        <span className="text-xl text-gray-900 dark:text-white" style={{ fontFamily: "'Tilt Warp', cursive" }}>
-                            Carvohub
-                        </span>
+                    <Link href="/" className="text-2xl text-gray-900 dark:text-white" style={{ fontFamily: "'Tilt Warp', cursive", fontWeight: 400 }}>
+                        carvohub
                     </Link>
 
                     {/* Desktop Navigation */}

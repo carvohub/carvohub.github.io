@@ -32,11 +32,8 @@ const Footer = () => {
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
                     {/* Brand section */}
                     <div className="lg:col-span-2">
-                        <Link href="/" className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                            <span className="text-xl text-gray-900 dark:text-white" style={{ fontFamily: "'Tilt Warp', cursive" }}>
-                                Carvohub
-                            </span>
+                        <Link href="/" className="text-2xl text-gray-900 dark:text-white" style={{ fontFamily: "'Tilt Warp', cursive", fontWeight: 400 }}>
+                            carvohub
                         </Link>
                         <p className="mt-4 text-sm text-gray-600 dark:text-gray-400 max-w-xs leading-relaxed">
                             Independent vehicle inspection reports for used car buyers.
