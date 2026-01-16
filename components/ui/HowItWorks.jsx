@@ -1,4 +1,26 @@
+import { useEffect, useRef } from "react"
+
 const HowItWorks = () => {
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate-in")
+                    }
+                })
+            },
+            { threshold: 0.1 }
+        )
+
+        const elements = sectionRef.current?.querySelectorAll(".animate-on-scroll")
+        elements?.forEach((el) => observer.observe(el))
+
+        return () => observer.disconnect()
+    }, [])
+
     const steps = [
         {
             step: "01",
@@ -23,10 +45,10 @@ const HowItWorks = () => {
     ]
 
     return (
-        <section id="how-it-works" className="bg-gray-50 dark:bg-gray-900 py-24">
+        <section ref={sectionRef} id="how-it-works" className="bg-gray-50 dark:bg-gray-900 py-24">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Header - Split style */}
-                <div className="mb-16">
+                <div className="mb-16 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
                     <h2 className="text-5xl md:text-6xl font-bold mb-1">
                         <span className="text-gray-900 dark:text-white">How It</span>
                     </h2>
@@ -40,7 +62,8 @@ const HowItWorks = () => {
                     {steps.map((item, idx) => (
                         <div
                             key={idx}
-                            className="group border border-gray-200 dark:border-gray-800 rounded-xl p-6 bg-white dark:bg-gray-950 hover:border-blue-200 dark:hover:border-blue-900 transition-all"
+                            className={`group border border-gray-200 dark:border-gray-800 rounded-xl p-6 bg-white dark:bg-gray-950 hover:border-blue-200 dark:hover:border-blue-900 transition-all duration-500 hover:shadow-lg hover:-translate-y-1 animate-on-scroll opacity-0 translate-y-8`}
+                            style={{ transitionDelay: `${idx * 100}ms` }}
                         >
                             {/* Step number */}
                             <div className="text-xs font-medium tracking-widest uppercase text-blue-500 mb-4">
@@ -58,6 +81,13 @@ const HowItWorks = () => {
                     ))}
                 </div>
             </div>
+
+            <style jsx>{`
+                .animate-in {
+                    opacity: 1 !important;
+                    transform: translateY(0) !important;
+                }
+            `}</style>
         </section>
     )
 }
