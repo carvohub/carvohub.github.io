@@ -16,12 +16,12 @@ const BlogPage = () => {
     return (
         <>
             <Head>
-                <title>Blog - Used Car Buying Tips & Insights | Carvohub</title>
+                <title>Used Car Buying Guide India | Tips, Checklists & Expert Advice | Carvohub</title>
                 <meta
                     name="description"
-                    content="Expert insights on buying used cars in India. Learn about vehicle inspections, what to look for, and how to avoid costly mistakes."
+                    content="Expert guides on buying used cars in India. Learn what to check before buying, common problems to avoid, and how pre-purchase inspections can save you money."
                 />
-                <meta name="keywords" content="used car buying tips, vehicle inspection guide, car buying India, pre-purchase inspection tips" />
+                <meta name="keywords" content="used car buying guide India, second hand car tips, what to check before buying used car, car inspection checklist, avoid used car scams India" />
                 <link rel="canonical" href="https://carvohub.com/blog" />
             </Head>
 
