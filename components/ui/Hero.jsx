@@ -1,7 +1,29 @@
 import Link from "next/link"
+import { useEffect, useRef } from "react"
 
-const Hero = () => (
-    <section className="relative overflow-hidden bg-white dark:bg-gray-950">
+const Hero = () => {
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate-in")
+                    }
+                })
+            },
+            { threshold: 0.1 }
+        )
+
+        const elements = sectionRef.current?.querySelectorAll(".animate-on-scroll")
+        elements?.forEach((el) => observer.observe(el))
+
+        return () => observer.disconnect()
+    }, [])
+
+    return (
+    <section ref={sectionRef} className="relative overflow-hidden bg-white dark:bg-gray-950">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 -z-10">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 dark:bg-blue-950/30 rounded-full blur-3xl opacity-50"></div>
@@ -13,7 +35,7 @@ const Hero = () => (
                 {/* Left Column - Text Content */}
                 <div>
                     {/* Badge */}
-                    <div className="mb-8">
+                    <div className="mb-8 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700">
                         <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium tracking-widest uppercase bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full border border-blue-100 dark:border-blue-500/20">
                             <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
                             Independent Vehicle Reports
@@ -21,21 +43,21 @@ const Hero = () => (
                     </div>
 
                     {/* Main heading - split style */}
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tight mb-2">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tight mb-2 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-100">
                         <span className="text-gray-900 dark:text-white">Buy Cars With</span>
                     </h1>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-none tracking-tight mb-8">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-none tracking-tight mb-8 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-150">
                         <span className="text-gray-400 dark:text-gray-500">Confidence</span>
                     </h2>
 
                     {/* Description */}
-                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl mb-10 leading-relaxed">
+                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl mb-10 leading-relaxed animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-200">
                         Get comprehensive vehicle inspection reports with expert analysis.
                         Make informed decisions and avoid costly mistakes when buying used cars in India.
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-300">
                         <Link
                             href="/vehicle-reports"
                             className="px-6 py-3 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors inline-flex items-center justify-center gap-2"
@@ -54,7 +76,7 @@ const Hero = () => (
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-200/50 dark:border-white/5">
+                    <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-200/50 dark:border-white/5 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-500">
                         {[
                             { value: "100+", label: "Parameters Checked" },
                             { value: "Detailed", label: "Video Analysis" },
@@ -74,7 +96,7 @@ const Hero = () => (
                 </div>
 
                 {/* Right Column - Mobile Phone Mockup */}
-                <div className="relative flex justify-center lg:justify-end">
+                <div className="relative flex justify-center lg:justify-end animate-on-scroll opacity-0 translate-x-12 transition-all duration-1000 delay-300">
                     <div className="relative">
                         {/* Mobile Phone Frame */}
                         <div className="relative w-[280px] h-[560px] bg-gray-900 rounded-[3rem] shadow-2xl border-8 border-gray-800">
@@ -165,7 +187,15 @@ const Hero = () => (
                 </div>
             </div>
         </div>
+
+        <style jsx>{`
+            .animate-in {
+                opacity: 1 !important;
+                transform: translateY(0) translateX(0) !important;
+            }
+        `}</style>
     </section>
-)
+    )
+}
 
 export default Hero
