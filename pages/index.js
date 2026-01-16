@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Carvohub - Pre-Purchase Vehicle Inspection Reports | Buy Used Cars with Confidence in India</title>
         <meta name='robots' content='index, follow' />
-        <meta name='description' content='India\'s trusted pre-purchase vehicle inspection service. Get detailed 100+ point inspection reports with photo and video documentation. Avoid hidden problems when buying used cars. Independent, unbiased assessments.' />
+        <meta name='description' content="India's trusted pre-purchase vehicle inspection service. Get detailed 100+ point inspection reports with photo and video documentation. Avoid hidden problems when buying used cars. Independent, unbiased assessments." />
         <meta name='keywords' content='pre-purchase car inspection India, used car inspection report, vehicle condition report, second hand car verification, car buying guide India, automobile inspection service, used car assessment, car inspection near me' />
 
         {/* Open Graph */}
