@@ -48,9 +48,9 @@ const ReportPage = () => {
                 <meta name="description" content={`AI-powered inspection report for ${reportData.title} ${reportData.variant}`} />
             </Head>
 
-            <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors">
                 {/* Header */}
-                <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+                <div className="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
                     <div className="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div>
                             <h1 className="text-xl font-bold text-gray-900 dark:text-white">Vehicle Report</h1>
@@ -82,7 +82,7 @@ const ReportPage = () => {
 
                 <div className="max-w-4xl mx-auto px-4 py-8">
                     {/* Car Header Card */}
-                    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-8">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden mb-8">
                         {/* YouTube Video Embed */}
                         <div className="aspect-video w-full bg-black">
                             <iframe
@@ -107,7 +107,7 @@ const ReportPage = () => {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
                                 <div>
                                     <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">Inspection Date</p>
                                     <p className="text-sm font-medium text-gray-900 dark:text-white mt-1">{reportData.inspectionDate}</p>
@@ -394,12 +394,12 @@ const ReportPage = () => {
             <img
                 src="/documents/rc-front.jpg"
                 alt="RC Front"
-                className="rounded-lg border border-gray-200 dark:border-gray-700"
+                className="rounded-lg border border-gray-200 dark:border-gray-800"
             />
             <img
                 src="/documents/rc-back.jpg"
                 alt="RC Back"
-                className="rounded-lg border border-gray-200 dark:border-gray-700"
+                className="rounded-lg border border-gray-200 dark:border-gray-800"
             />
         </div>
     </SubSection>
@@ -447,7 +447,7 @@ const ReportPage = () => {
             <img
                 src="/documents/puc.jpg"
                 alt="PUC Certificate"
-                className="rounded-lg border border-gray-200 dark:border-gray-700"
+                className="rounded-lg border border-gray-200 dark:border-gray-800"
             />
         </div>
     </SubSection>
@@ -468,7 +468,7 @@ const ReportPage = () => {
                     
 
                     {/* Bottom CTA */}
-                    <div className="mt-12 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 text-center">
+                    <div className="mt-12 bg-white dark:bg-gray-950 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 text-center">
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Have questions about this Vehicle?</h3>
                         <p className="text-gray-600 dark:text-gray-400 mb-6">Our team is here to help you understand every detail.</p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -501,8 +501,8 @@ const ReportPage = () => {
 
 // Helper Components
 const Section = ({ title, icon, children }) => (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-6">
-        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border-b border-gray-200 dark:border-gray-700 flex items-center gap-3">
+    <div className="bg-white dark:bg-gray-950 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden mb-6">
+        <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border-b border-gray-200 dark:border-gray-800 flex items-center gap-3">
             <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
                 {icon}
             </div>
@@ -514,7 +514,7 @@ const Section = ({ title, icon, children }) => (
 
 const SubSection = ({ title, children }) => (
     <div className="mb-6 last:mb-0">
-        <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-3 pb-2 border-b border-gray-100 dark:border-gray-700">{title}</h3>
+        <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-3 pb-2 border-b border-gray-100 dark:border-gray-800">{title}</h3>
         {children}
     </div>
 );
