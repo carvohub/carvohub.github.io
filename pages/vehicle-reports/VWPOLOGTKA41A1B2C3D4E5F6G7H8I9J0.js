@@ -35,10 +35,10 @@ const ReportPage = () => {
     ];
 
     const tyrePhotos = {
-    lf: { src: `${basePath}/tyre-lf.jpeg`, treadDepth: "6mm", condition: "Good" },
-    rf: { src: `${basePath}/tyre-rf.jpeg`, treadDepth: "6mm", condition: "Good" },
-    lr: { src: `${basePath}/tyre-lr.jpeg`, treadDepth: "7mm", condition: "Good" },
-    rr: { src: `${basePath}/tyre-rr.jpeg`, treadDepth: "7mm", condition: "Good" },
+    lf: { src: `${basePath}/tyre-lf.jpeg`, treadDepth: "5.9mm", condition: "Good" },
+    rf: { src: `${basePath}/tyre-rf.jpeg`, treadDepth: "5.9mm", condition: "Good" },
+    lr: { src: `${basePath}/tyre-lr.jpeg`, treadDepth: "6.0mm", condition: "Good" },
+    rr: { src: `${basePath}/tyre-rr.jpeg`, treadDepth: "6.3mm", condition: "Good" },
 };
 
     const interiorPhotos = [
