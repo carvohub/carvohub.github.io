@@ -9,13 +9,6 @@ const ReportPage = () => {
 
     const sectionsRef = useRef([]);
 
-    const sellerData = {
-        name: "South City Cars",
-        phone: "+919845493970",
-        address: "25&26, 23rd Main Rd, J. P. Nagar, Bengaluru, Karnataka 560078",
-        latitude: 12.9116249,
-        longitude: 77.5868232,
-    };
 
     const reportData = {
         carUUID: "VWPOLOGTKA41A1B2C3D4E5F6G7H8I9J0",
@@ -523,51 +516,7 @@ const ReportPage = () => {
 </section>
 
 
-                {/* Seller Section */}
-                <section
-                    ref={el => sectionsRef.current[5] = el}
-                    id="seller"
-                    className="py-24 bg-white dark:bg-gray-950"
-                >
-                    <div className="max-w-4xl mx-auto px-6">
-                        <div className="text-center mb-12">
-                            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Dealer Information</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-2">
-                                {sellerData.name}
-                            </h2>
-                        </div>
-
-                        <div className="bg-gray-50 dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800">
-                            <div className="aspect-video w-full">
-                                <iframe
-                                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.3!2d${sellerData.longitude}!3d${sellerData.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150d2527f251%3A0x3a3c34652415412a!2sSouth%20City%20Cars!5e0!3m2!1sen!2sin`}
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    title="Dealer Location"
-                                />
-                            </div>
-                            <div className="p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                                <div>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-2">{sellerData.address}</p>
-                                    <a href={`tel:${sellerData.phone}`} className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline">
-                                        {sellerData.phone}
-                                    </a>
-                                </div>
-                                <a
-                                    href="https://maps.app.goo.gl/ghJsPTYtmsZk5XK27"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-colors"
-                                >
-                                    Get Directions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                
 
                 {/* CTA Section */}
                 <section className="py-24 bg-gray-900 dark:bg-black">
