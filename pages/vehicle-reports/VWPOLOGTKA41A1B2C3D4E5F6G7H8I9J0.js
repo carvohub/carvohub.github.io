@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 const ReportPage = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const [activeSection, setActiveSection] = useState(0);
+    const [heroIndex, setHeroIndex] = useState(0);
+
+
     const sectionsRef = useRef([]);
 
     const sellerData = {
@@ -15,21 +18,21 @@ const ReportPage = () => {
     };
 
     const reportData = {
-        carUUID: "KIASONKA52X7M4Q9R2C8A6FZ0WBTD",
-        title: "2024 Kia Sonet Diesel",
-        variant: "GT Line",
+        carUUID: "VWPOLOGTKA41A1B2C3D4E5F6G7H8I9J0",
+        title: "2019 Volkswagen Polo Petrol",
+        variant: "GT TSI",
         inspectionDate: "09/01/2026",
-        odometer: "31,293",
-        youtubeVideoId: "vHqdumh2q_E",
+        odometer: "46,523",
+        youtubeVideoId: "",
     };
 
-    const basePath = "/images/reports/KIASONKA52X7M4Q9R2C8A6FZ0WBTD";
+    const basePath = "/images/reports/VWPOLOGTKA41A1B2C3D4E5F6G7H8I9J0";
 
     const carPhotos = [
         { src: `${basePath}/car-front.jpeg`, alt: "Front view" },
         { src: `${basePath}/car-back.jpeg`, alt: "Rear view" },
-        { src: `${basePath}/car-left.png`, alt: "Left side" },
-        { src: `${basePath}/car-right.png`, alt: "Right side" },
+        { src: `${basePath}/car-left.jpeg`, alt: "Left side" },
+        { src: `${basePath}/car-right.jpeg`, alt: "Right side" },
     ];
 
     const scratchPhotos = [
@@ -39,21 +42,22 @@ const ReportPage = () => {
     ];
 
     const tyrePhotos = {
-    lf: { src: `${basePath}/tyre-lf.jpeg`, treadDepth: "1.8mm", condition: "Warning" },
-    rf: { src: `${basePath}/tyre-rf.jpeg`, treadDepth: "1.8mm", condition: "Warning" },
-    lr: { src: `${basePath}/tyre-lr.jpeg`, treadDepth: "1.8mm", condition: "Warning" },
-    rr: { src: `${basePath}/tyre-rr.jpeg`, treadDepth: "1.8mm", condition: "Warning" },
+    lf: { src: `${basePath}/tyre-lf.jpeg`, treadDepth: "6mm", condition: "Good" },
+    rf: { src: `${basePath}/tyre-rf.jpeg`, treadDepth: "6mm", condition: "Good" },
+    lr: { src: `${basePath}/tyre-lr.jpeg`, treadDepth: "7mm", condition: "Good" },
+    rr: { src: `${basePath}/tyre-rr.jpeg`, treadDepth: "7mm", condition: "Good" },
 };
 
-const interiorPhotos = [
+    const interiorPhotos = [
         { src: `${basePath}/interior-1.jpeg`, alt: "Interior dashboard" },
         { src: `${basePath}/interior-2.jpeg`, alt: "Front seats" },
         { src: `${basePath}/interior-3.jpeg`, alt: "Rear seats" },
     ];
 
-    const heroImages = [...carPhotos];
-    const [heroIndex, setHeroIndex] = useState(0);
+    const heroImages = [...carPhotos, ...interiorPhotos];
     const [lightboxImage, setLightboxImage] = useState(null);
+
+
 
 
     // Scroll progress tracking
@@ -79,7 +83,6 @@ const interiorPhotos = [
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-
     useEffect(() => {
         if (!heroImages.length) return;
 
@@ -101,6 +104,8 @@ const interiorPhotos = [
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [lightboxImage]);
+
+
 
     const sections = [
         { id: "overview", label: "Overview" },
@@ -132,18 +137,15 @@ const interiorPhotos = [
                     <a
                         key={section.id}
                         href={`#${section.id}`}
-                        className={`group flex items-center gap-3 transition-all duration-300 ${
-                            activeSection === idx ? "opacity-100" : "opacity-40 hover:opacity-70"
-                        }`}
+                        className={`group flex items-center gap-3 transition-all duration-300 ${activeSection === idx ? "opacity-100" : "opacity-40 hover:opacity-70"
+                            }`}
                     >
-                        <span className={`text-xs font-medium text-right transition-all duration-300 ${
-                            activeSection === idx ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
-                        } text-gray-600 dark:text-gray-400`}>
+                        <span className={`text-xs font-medium text-right transition-all duration-300 ${activeSection === idx ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                            } text-gray-600 dark:text-gray-400`}>
                             {section.label}
                         </span>
-                        <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                            activeSection === idx ? "bg-blue-600 scale-150" : "bg-gray-400 dark:bg-gray-600"
-                        }`} />
+                        <div className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSection === idx ? "bg-blue-600 scale-150" : "bg-gray-400 dark:bg-gray-600"
+                            }`} />
                     </a>
                 ))}
             </nav>
@@ -156,6 +158,7 @@ const interiorPhotos = [
                     className="relative min-h-screen flex items-center"
                 >
                     {/* Background Video/Image */}
+                    
                     <div className="absolute inset-0">
                         {heroImages.map((image, idx) => (
                             <img
@@ -177,9 +180,11 @@ const interiorPhotos = [
                                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                                 <span className="text-sm font-medium text-white/90">Verified Inspection</span>
                             </div>
+
                             <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-black/40 backdrop-blur rounded-full text-white text-sm">
                                 {heroIndex < carPhotos.length ? "Exterior View" : "Interior View"}
                             </div>
+
 
                             {/* Title */}
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-slide-up">
@@ -200,13 +205,13 @@ const interiorPhotos = [
                                     <div className="text-sm text-white/60 font-medium">Overall Condition</div>
                                 </div>
                                 <div className="border-l-2 border-amber-500 pl-4">
-                                    <div className="text-3xl font-bold text-white">3</div>
+                                    <div className="text-3xl font-bold text-white">0</div>
                                     <div className="text-sm text-white/60 font-medium">Minor Issues</div>
                                 </div>
                             </div>
 
                             {/* Actions */}
-                            <div className="flex flex-wrap gap-4 animate-slide-up animation-delay-300">
+                            {/* <div className="flex flex-wrap gap-4 animate-slide-up animation-delay-300">
                                 <a
                                     href={`https://youtube.com/watch?v=${reportData.youtubeVideoId}`}
                                     target="_blank"
@@ -228,7 +233,7 @@ const interiorPhotos = [
                                     </svg>
                                     Download PDF
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
@@ -240,9 +245,9 @@ const interiorPhotos = [
                     </div>
                 </section>
 
-                                
+                {/* Photo Gallery */}
 
-            {/* Exterior Photo Gallery */}
+                {/* Exterior Photo Gallery */}
                 <section className="py-24 bg-gray-50 dark:bg-gray-900">
                     <div className="max-w-7xl mx-auto px-6">
                         <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
@@ -271,7 +276,7 @@ const interiorPhotos = [
                     </div>
                 </section>
                 {/* Interior Photo Gallery */}
-                {/* <section className="py-24 bg-gray-50 dark:bg-gray-900">
+                <section className="py-24 bg-gray-50 dark:bg-gray-900">
                     <div className="max-w-7xl mx-auto px-6">
                         <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
                             Interior Photos
@@ -298,9 +303,7 @@ const interiorPhotos = [
                             ))}
                         </div>
                     </div>
-                </section> */}
-
-
+                </section>
 
 
                 {/* Exterior Section */}
@@ -310,7 +313,7 @@ const interiorPhotos = [
                     className="py-24 bg-white dark:bg-gray-950"
                 >
                     <div className="max-w-7xl mx-auto px-6">
-                        <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        <div className="grid lg:grid-cols-1 gap-16 items-start">
                             <div className="lg:sticky lg:top-32">
                                 <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Body Condition</span>
                                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-2 mb-6">
@@ -318,17 +321,17 @@ const interiorPhotos = [
                                 </h2>
                                 <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
                                     The vehicle's exterior is in good overall condition. Paint maintains consistent color
-                                    throughout with no signs of repainting. Minor scratches noted in specific areas.
+                                    throughout with no signs of repainting, only paint polishing done to remove small scratches.
                                 </p>
 
                                 {/* Condition Meter */}
                                 <div className="mb-8">
                                     <div className="flex justify-between text-sm mb-2">
                                         <span className="font-medium text-gray-700 dark:text-gray-300">Overall Condition</span>
-                                        <span className="font-bold text-green-600">85%</span>
+                                        <span className="font-bold text-green-600">95%</span>
                                     </div>
                                     <div className="h-3 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
-                                        <div className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-1000" style={{ width: "85%" }} />
+                                        <div className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-1000" style={{ width: "95%" }} />
                                     </div>
                                 </div>
 
@@ -338,9 +341,9 @@ const interiorPhotos = [
                                         <div className="text-2xl font-bold text-green-700 dark:text-green-400">0</div>
                                         <div className="text-sm text-green-600 dark:text-green-500">Dents</div>
                                     </div>
-                                    <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
-                                        <div className="text-2xl font-bold text-amber-700 dark:text-amber-400">3</div>
-                                        <div className="text-sm text-amber-600 dark:text-amber-500">Minor Scratches</div>
+                                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800">
+                                        <div className="text-2xl font-bold text-green-700 dark:text-green-400">0</div>
+                                        <div className="text-sm text-green-600 dark:text-green-500">Minor Scratches</div>
                                     </div>
                                     <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800">
                                         <div className="text-2xl font-bold text-green-700 dark:text-green-400">No</div>
@@ -353,28 +356,8 @@ const interiorPhotos = [
                                 </div>
                             </div>
 
-                            <div className="space-y-6">
-                                {/* Issue Cards */}
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Areas of Concern</h3>
-                                {scratchPhotos.map((photo, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="group bg-gray-50 dark:bg-gray-900 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-300"
-                                    >
-                                        <div className="aspect-[16/9] overflow-hidden">
-                                            <img
-                                                src={photo.src}
-                                                alt={photo.alt}
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            />
-                                        </div>
-                                        <div className="p-4 flex items-center gap-3">
-                                            <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                                            <span className="font-medium text-gray-700 dark:text-gray-300">{photo.alt}</span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+
+
                         </div>
                     </div>
                 </section>
@@ -446,17 +429,16 @@ const interiorPhotos = [
                                 { title: "AC System", status: "good", desc: "Cooling effective, all vents working" },
                                 { title: "Infotainment", status: "good", desc: "CarPlay & Android Auto functional" },
                                 { title: "Steering", status: "good", desc: "All buttons working, no wear" },
-                                { title: "Power Windows", status: "warning", desc: "Front lock needs verification" },
+                                { title: "Power Windows", status: "good", desc: "All windows working correctly" },
                                 { title: "Odometer", status: "good", desc: "Digital display working correctly" },
                                 { title: "Lighting", status: "good", desc: "Interior lights all functional" },
                             ].map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg ${
-                                        item.status === "good"
+                                    className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg ${item.status === "good"
                                             ? "bg-green-50/50 dark:bg-green-900/10 border-green-200 dark:border-green-800"
                                             : "bg-amber-50/50 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800"
-                                    }`}
+                                        }`}
                                 >
                                     <div className="flex items-start justify-between mb-3">
                                         <h4 className="font-bold text-gray-900 dark:text-white">{item.title}</h4>
@@ -657,6 +639,7 @@ const interiorPhotos = [
                     </div>
                 </div>
             )}
+
 
             <style jsx>{`
                 @keyframes fade-in {

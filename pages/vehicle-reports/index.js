@@ -11,6 +11,14 @@ const VehicleReportsPage = () => {
             inspectionDate: "09/01/2026",
             thumbnail: "/images/reports/KIASONKA52X7M4Q9R2C8A6FZ0WBTD/car-front.jpeg",
         },
+        {
+        id: "VWPOLOGTKA41A1B2C3D4E5F6G7H8I9J0",
+        title: "2019 Volkswagen Polo Petrol",
+        variant: "GT TSI",
+        inspectionDate: "16/01/2026 12:30",
+        odometer: "46,523 KMS",
+        thumbnail: "/images/reports/VWPOLOGTKA41A1B2C3D4E5F6G7H8I9J0/car-front.jpeg",
+    },
     ];
 
     return (
