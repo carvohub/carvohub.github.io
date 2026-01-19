@@ -44,10 +44,10 @@ const Hero = () => {
 
                     {/* Main heading - split style */}
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-none tracking-tight mb-2 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-100">
-                        <span className="text-gray-900 dark:text-white">Buy Cars With</span>
+                        <span className="text-gray-900 dark:text-white">Buy Cars </span>
                     </h1>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-none tracking-tight mb-8 animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-150">
-                        <span className="text-gray-400 dark:text-gray-500">Confidence</span>
+                        <span className="text-gray-400 dark:text-gray-500">With Confidence</span>
                     </h2>
 
                     {/* Description */}

@@ -12,7 +12,6 @@ const Navbar = () => {
     const navigation = [
         { title: "Reports", path: "/vehicle-reports" },
         { title: "Blog", path: "/blog" },
-        { title: "How It Works", path: "/#how-it-works" },
     ]
 
     useEffect(() => {

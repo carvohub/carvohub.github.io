@@ -20,6 +20,25 @@ const BlogPage = () => {
             category: "Buyer's Guide",
         },
         {
+            slug: "independent-car-buying-guide-india",
+            title: "Independent Car Buying Guide in India: New & Used Car Buyers Must Read",
+            excerpt:
+                "Buying a new or used car in India? Learn how an independent car buying guide helps you avoid dealer scams, overpaying, and hidden vehicle problems.",
+            date: "January 18, 2026",
+            readTime: "7 min read",
+            category: "Buyer's Guide",
+        },
+        {
+    slug: "what-to-look-for-while-buying-a-car-india",
+    title: "What to Look for While Buying a Car in India: A Practical Buyer’s Guide",
+    excerpt:
+        "Confused about choosing the right car? This guide covers family size, usage, mileage, safety, status value, and ownership planning for Indian car buyers.",
+    date: "January 19, 2026",
+    readTime: "6 min read",
+    category: "Buyer's Guide",
+},
+
+        {
             slug: "classic-cars-that-defined-automotive-history",
             title: "10 Classic Cars That Defined Automotive History",
             excerpt: "From the Ford Mustang to the Jaguar E-Type, these iconic machines didn't just drive on roads—they drove history forward.",
@@ -56,7 +75,7 @@ const BlogPage = () => {
     return (
         <>
             <Head>
-                <title>Used Car Buying Guide India | Tips, Checklists & Expert Advice | Carvohub</title>
+                <title>Car Buying Guide India | Tips, Checklists & Expert Advice | Carvohub</title>
                 <meta
                     name="description"
                     content="Expert guides on buying used cars in India. Learn what to check before buying, common problems to avoid, and how pre-purchase inspections can save you money."
@@ -76,7 +95,7 @@ const BlogPage = () => {
                             <span className="text-gray-400 dark:text-gray-500">Guides</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl">
-                            Expert advice on buying used cars and understanding vehicle inspections.
+                            Expert advice on buying new and used cars and understanding vehicle inspections.
                         </p>
                     </div>
 
